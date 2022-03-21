@@ -2,33 +2,33 @@ let btn = document.getElementById("button");
 let body = document.getElementById("background")
 let simp = document.getElementById("simp");
 let hex = document.getElementById("hex");
-/*let backgroundText = document.getElementById("backgroundtext")
-let createTextNode = document.createTextNode("new Text")*/
+let backgroundText = document.getElementById("backgroundtext")
 
+let color = ['Blue', '#F15025', 'Green', 'Rgba(133,122,200)', 'Yellow', 'Red'];
 
-let colors = ['salmon', 'green', 'blue', 'purple', 'red'];
-let firstColor = 0;
-let secondColor = 1;
+let alphaNum = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9, 'A', 'B', 'C', 'D' , 'E', 'F'];
 
+body.style.background = '#FFFFFF';
 
-
-btn.addEventListener("click", function () {
-    body.style.background = colors[firstColor];
-    firstColor = firstColor + 1
-    if(firstColor > colors.length)
-    {
-        body.style.background = colors[secondColor]
-        firstColor = firstColor + 1;
+btn.addEventListener("click", function() {
+    firstColor = Math.floor(Math.random() * color.length)
+    body.style.background = color[firstColor]; 
     
-    }
-    //firstColor >= colors.length - 1 ? 0 : firstColor + 1;
+    backgroundText.innerHTML = 'Background color :' + ' ' + color[firstColor]
 
 })
-
 simp.addEventListener("click", function(){
-    console.log("value");
+    body.style.background = '#F1f5f8';
+    backgroundText.innerHTML = 'Background color :' + ' ' + '#F1f5f8';
 })
+
 
 hex.addEventListener("click", function(){
-    console.log('hex click');
+    let hash = '#';
+    for(let i=0; i <6; i++){
+    let heX = Math.floor(Math.random() * alphaNum.length);
+     hash = hash + alphaNum[heX];
+    }
+     body.style.background = hash;
+     backgroundText.innerHTML = 'Background color :' + ' ' + hash;
 })
