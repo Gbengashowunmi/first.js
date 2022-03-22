@@ -1,9 +1,10 @@
 body{
     
-    background-color: #ffffff;
+    background-color: #f1f5f8;
     display: block;
     justify-content: center;
     width: 100%;
+    margin: 0;
 }
 .header{
     height: 40px;
@@ -13,7 +14,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 2px 30px grey;
+    box-shadow: 10px 10px 10px rgb(216, 213, 213);
 }
 
 #color{ 
@@ -28,26 +29,29 @@ body{
 }
 
 #code h1:hover{
-    color: rgb(43, 151, 170) ;
+    color: rgb(43, 151, 170);
     cursor: pointer;
 }
 h1{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
+
 main{
-    display: block;
-    margin: auto;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
 .bgrnd{
-    width: 50%;
+    width: max-content;
     height: 65px;
-    margin-top: 14%;
+    padding-left: 10px;
+    padding-right: 10px;
     color: azure;
-    background-color: rgb(43, 41, 41);
+    background-color: rgb(14, 13, 13);
     border-radius: 10px;
     font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,13 +60,17 @@ main{
     justify-content: center;
     align-items: center;
 }
+.bttn{
+    width: 100%;
+    margin: auto;
+}
 button{
     background: none;
     border-style: solid;
     border-color: black;
     border-radius: 6px;
     box-shadow: 0px 1px 5px rgb(38, 37, 36);
-    width: 10%;
+    width: fit-content;
     height: 40px;
     margin-top: 30px;
     font-size: 18px;
@@ -73,4 +81,25 @@ button:hover{
     background: black;
     color: white;
     cursor: pointer;
+}
+
+@media (max-width:600px){
+    .bgrnd{
+        width: 100%;
+        height: fit-content;
+        color: azure;
+        background-color: rgb(14, 13, 13);
+        border-radius: 10px;
+        font-size: 30px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+    button{
+        width: max-content;
+        padding: 10px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+    }
 }

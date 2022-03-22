@@ -8,23 +8,17 @@ let color = ['Blue', '#F15025', 'Green', 'Rgba(133,122,200)', 'Yellow', 'Red'];
 
 let alphaNum = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9, 'A', 'B', 'C', 'D' , 'E', 'F'];
 
-body.style.background = '#FFFFFF';
-backgroundText.innerHTML = 'Background color :' + ' ' + '#F1f5f8';
+body.style.background = '#F1f5f8';
+    backgroundText.innerHTML = 'Background color :' + ' ' + '#F1f5f8';
 
-btn.addEventListener("click", function() {
-    firstColor = Math.floor(Math.random() * color.length)
-    body.style.background = color[firstColor]; 
-    
-    backgroundText.innerHTML = 'Background color :' + ' ' + color[firstColor]
-
-})
 simp.addEventListener("click", function(){
     body.style.background = '#F1f5f8';
     backgroundText.innerHTML = 'Background color :' + ' ' + '#F1f5f8';
 })
 
 
-hex.addEventListener("click", function(){
+btn.addEventListener("click", function(){
+    
     let hash = '#';
     for(let i=0; i <6; i++){
     let heX = Math.floor(Math.random() * alphaNum.length);
